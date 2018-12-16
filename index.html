@@ -16,9 +16,9 @@
     <!-- Slicknav -->
     <link rel="stylesheet" type="text/css" href="assets/css/slicknav.css">
     <!-- Menu CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/menu_sideslide.css">
+    <!--<link rel="stylesheet" type="text/css" href="assets/css/menu_sideslide.css">-->
     <!-- Slider CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/slide-style.css">
+    <!--<link rel="stylesheet" type="text/css" href="assets/css/slide-style.css">-->
     <!-- Nivo Lightbox -->
     <link rel="stylesheet" type="text/css" href="assets/css/nivo-lightbox.css">
     <!-- Animate -->
@@ -396,7 +396,7 @@
                 <div class="col-md-6 col-lg-6 col-sm-12">
                     <div class="contact-block">
                         <h2>Contactformulier</h2>
-                        <form id="contactForm" method="post" action="contactForm.php">
+                        <form action="contactForm.php" method="post">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -414,18 +414,19 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Onderwerp" id="msg_subject" class="form-control"
+                                        <input type="text" placeholder="Onderwerp" id="msg_subject" name="msg_subject" class="form-control"
                                                required data-error="Gelieve een onderwerp in te voeren">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <textarea class="form-control" id="message" placeholder="Uw Bericht" rows="5"
+                                        <textarea class="form-control" id="message" name="message" placeholder="Uw Bericht" rows="5"
                                                   data-error="Schrijf uw bericht" required></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                     <div class="submit-button">
+                                        <input type="hidden" name="moduleAction" value="sendEmail" />
                                         <button class="btn btn-common" id="submit" type="submit">Verstuur Bericht
                                         </button>
                                         <div id="msgSubmit" class="h3 text-center hidden"></div>
